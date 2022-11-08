@@ -1,28 +1,30 @@
-import java.util.Scanner;;
+import java.util.Scanner;
 class Main
 {
-    public static boolean isprime(int n)
+    public static boolean prime(int n)
     {
-        if(n<2)
-            return false;
+        int count=0;
         for(int i=2;i<=(int)Math.sqrt(n);i++)
         {
             if(n%i==0)
-                return false;
+            count++;
         }
+        if(count==0)
         return true;
+        else
+        return false;
     }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int a,b;
-        a=sc.nextInt();
-        b=sc.nextInt();
-        for(int i=a+1;i<b;i++)
+        int n,m;
+        n=sc.nextInt();
+        m=sc.nextInt();
+        for(int i=n+1;i<m;i++)
         {
-            if(isprime(i))
+            if(prime(i))
             System.out.println(i);
         }
-               
+        
     }
 }
