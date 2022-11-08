@@ -1,26 +1,25 @@
 import java.util.Scanner;
-class ReverseNumber
+class Main
 {
-  public static int findReverse(int n)
-  {
-     //write the logic
-	 int sum=0,r;
-	 while(n>0)
-	 {
-	    r=n%10;
-		sum=sum*10 + r;
-		n=n/10;
-	 }
-	 return sum;
-	 
-  } 
-  public static void main(String args[])
-  {
-      Scanner sc=new Scanner(System.in);
-	  int n,res;
-	  n=sc.nextInt();
-	  res=findReverse(n);
-	  
-	  System.out.println(res);
-  }
+    public static int rev(int n)
+    {
+        int r=0;
+        while(n>0)
+        {
+         r=r*10+n%10;
+         n=n/10;
+        }
+        return r;
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n;
+        n=sc.nextInt();
+        int max=rev(n);
+      
+      System.out.println(max);
+     
+    }
+    
 }
