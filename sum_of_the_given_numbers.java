@@ -1,23 +1,17 @@
 import java.util.Scanner;
-class Main
+public class Main
 {
-   
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int t,n,m;
-        t=sc.nextInt();
-
-        while(t>0)
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++)
         {
-            n=sc.nextInt();
-            m=sc.nextInt();
-            int sum=m+n;
-             System.out.println(sum);
-            t--;
-            
+            int x,y;
+            x=sc.nextInt();
+            y=sc.nextInt();
+            System.out.println(x+y);
         }
-
+        
     }
-    
 }
